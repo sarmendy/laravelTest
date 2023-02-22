@@ -16,8 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+    
+Route::get('/messages', 'App\Http\Controllers\MessagesController@index')->name('messages.index');
+Route::get('/messages/create', [App\Http\Controllers\MessagesController::class, 'create'])->name('messages.create');
+Route::get('/messages/{conversation}', [App\Http\Controllers\MessagesController::class, 'show'])->name('messages.show');
+Route::post('/messages', [App\Http\Controllers\MessagesController::class, 'store'])->name('messages.store');
 
-Route::post('/pets/store', [App\Http\Controllers\PetsController::class, 'store'])->name('pets.store');
 
 Auth::routes();
 

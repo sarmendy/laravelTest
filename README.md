@@ -7,6 +7,23 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Messaging in Laravel
+This is a Laravel project to implement a messaging system between users. The system allows users to send messages to other users, keeping a record of all conversations and messages sent.
+
+The user interface is composed of three main elements:
+
+A list of conversations: displays a list of all the user's active conversations, allowing the user to click on a conversation to view associated messages.
+
+A text field to write messages: allows the user to write a message to send to a selected recipient.
+
+A send button: once the user has written the message, they can click this button to send the message to the selected recipient.
+
+In addition to these elements, the user interface may also include other features such as images, options, and additional buttons to enhance the user experience.
+
+The implementation of the messaging system is based on the creation of two database tables: "users" and "messages". The "users" table contains information about all users registered in the system, while the "messages" table maintains a record of all messages sent and received. The tables are properly connected to allow for communication between users.
+
+If a message cannot be sent successfully, the application returns a detailed error message indicating the type of input, if it's empty, or any other relevant error. If the application functions correctly, the corresponding new message is displayed.
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:

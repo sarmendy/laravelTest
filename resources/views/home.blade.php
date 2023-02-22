@@ -15,11 +15,9 @@
                     @endif
 
                     {{ __('You are logged in!') }}
-                    <h1>Lista de usuarios</h1>
-                    <form action="{{route("pets.store")}}" method="POST">
+                    <form action="{{route("messages.index")}}" method="POST">
                         @csrf
-                        <label>Name</label><input type="text" name="name">
-                        <button type="submit" name="submit">
+                        <a href="{{ url('/messages') }}" class="btn btn-primary">Ir a Index</a>
                     </form>
                 </div>
             </div>
